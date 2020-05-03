@@ -43,10 +43,22 @@
   
     <!-- Page Content -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h1 class="mt-5">Current TODOs</h1>
+      <div class="d-flex flex-column mb-3">
+        <form action="#">
+          <div class="form-group">
+            <label for="description"><strong>Description: </strong></label>
+            <input type="text" class="form-control" value="PP:SkSy Homework TODO-Tracker " maxlength="160" required id="description">
           </div>
+          <div class="form-group">
+            <label for="due"><strong>Due: </strong></label>
+            <input type="text" class="form-control" value="14.05.2020" maxlength="32" required id="due">
+          </div>
+          <div class="form-group">
+            <label for="state"><strong>Accomplished in %: </strong></label>
+            <input type="number" class="form-control" value="25" min="0" max="100" required id="state">
+          </div>
+          <button type="submit" class="btn btn-dark">Save</button>
+        </form>
       </div>
     </div>
 
