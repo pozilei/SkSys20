@@ -1,0 +1,32 @@
+{% extends "todos_app/base.html" %}
+
+{% block title %} Edit TODO {% endblock %}
+
+
+{% block header %} Edit TODOs {% endblock %}
+
+{% block content %}
+
+<div class="d-flex flex-column mb-3">
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="description"><strong>Description: </strong></label>
+      <input name="description" type="text" class="form-control" placeholder="Description" maxlength="160" required
+        id="description" value="{{form.initial.description}}">
+    </div>
+    <div class="form-group">
+      <label for="due"><strong>Due: </strong></label>
+      <input name="due" type="text" class="form-control" placeholder="Due" maxlength="32" required id="due"
+        value="{{form.initial.due}}">
+    </div>
+    <div class="form-group">
+      <label for="accomplished"><strong>Accomplished in %: </strong></label>
+      <input name="accomplished" type="number" placeholder="Accomplished" class="form-control" min="0" max="100"
+        required id="accomplished" value="{{form.initial.accomplished}}">
+    </div>
+    <button type="submit" class="btn btn-dark">Save</button>
+  </form>
+</div>
+
+{% endblock %}
