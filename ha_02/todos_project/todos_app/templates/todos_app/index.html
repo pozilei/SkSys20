@@ -1,0 +1,38 @@
+{% extends "todos_app/base.html" %}
+
+{% block title %} SkSys20: Aufgabe 1 {% endblock %}
+
+
+{% block header %} Current TODOs {% endblock %}
+
+{% block content %}
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Description</th>
+                <th scope="col">Due</th>
+                <th scope="col">Accomplished in %</th>
+                <th scope="col">Tool</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for elm in todo_list %}
+            <tr>
+                <th scope="row">{{ elm.description }} </th>
+                <td>{{ elm.due }}</td>
+                <td>{{ elm.accomplished }}</td>
+                <td>
+                    <div class="btn-group">
+                        <a role="button" class="btn btn-dark" href="{% url 'edit_todo' elm.pk %}">Edit</a>
+                        <a role="button" class="btn btn-dark" href="{% url 'remove' elm.pk %}">Remove</a>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

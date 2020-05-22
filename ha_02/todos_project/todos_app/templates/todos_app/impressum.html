@@ -1,0 +1,20 @@
+{% extends "todos_app/base.html" %}
+
+{% block title %} Impressum {% endblock %}
+
+
+{% block header %} Kontaktinformationen {% endblock %}
+
+{% block content %}
+
+<div class="d-flex flex-column mb-3">
+    {% for elm in author_list %}
+    <address>
+        {{elm.first_name}} {{elm.last_name}}</br>
+        {{elm.uni}}</br>
+        <strong>Email:</strong> <a href="mailto:{{elm.mail}}">{{elm.mail}}</a>
+    </address>
+    {% endfor %}
+</div>
+
+{% endblock %}
