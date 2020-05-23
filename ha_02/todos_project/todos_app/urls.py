@@ -20,4 +20,7 @@ from . import views
 urlpatterns = [
     path('impressum/', views.impressum, name='impressum'),
     url(r'^remove/(?P<pk>\d+)/$', views.remove, name='remove'),
+    path('', views.index, name='index'),
+    path('edit_todo/<int:pk>/', views.edit_todo, name='edit_todo'),
+    path('create_todo/', views.create_todo, name='create_todo'),
 ]
