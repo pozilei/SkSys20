@@ -6,7 +6,7 @@ In this project we use [Bootstrap](https://getbootstrap.com/) and [Django](https
 
 
 **Requirement:** Please install the latest [Python](https://www.python.org/downloads/) and 
- [Django](https://www.djangoproject.com/) Version.
+ [Django](https://www.djangoproject.com/) version.
 
 To run the project, please cd into /ha_02/todos_project and run 
 
@@ -17,5 +17,3 @@ default URL `http://127.0.0.1:8000/`
 for admin access `http://127.0.0.1:8000/admin`
 username: `admin`
 password: `supersicher`
-
-Access the webite through the given URL.
