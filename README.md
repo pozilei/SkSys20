@@ -9,6 +9,6 @@ In this project we use [Bootstrap](https://getbootstrap.com/) and [Django](https
 
 To run the project, please cd into /ha_02/todos_project and run 
 
-> python3 manage.py runserver
+`python3 manage.py runserver`
 
 Access the webite through the given URL.
